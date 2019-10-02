@@ -1,3 +1,4 @@
+'use strict'
 function getForecast() {
     let APIKey = "e3c4c0f5b0220728586f535b1f6bef96";
     let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=${APIKey}`;
@@ -44,14 +45,19 @@ function getForecast() {
           let image4 = $('<img>');
           let image5 = $('<img>');
           image1.attr('src',getIcon1);
+          $("#weatherimg1").empty();
           $("#weatherimg1").append(image1);
           image2.attr('src',getIcon2);
+          $("#weatherimg2").empty();
           $("#weatherimg2").append(image2);
           image3.attr('src',getIcon3);
+          $("#weatherimg3").empty();
           $("#weatherimg3").append(image3);
           image4.attr('src',getIcon4);
+          $("#weatherimg4").empty();
           $("#weatherimg4").append(image4);
           image5.attr('src',getIcon5);
+          $("#weatherimg5").empty();
           $("#weatherimg5").append(image5);
         
           $("#tempF1").html(`Temp: ${response.list[4].main.temp}&#8457;`);

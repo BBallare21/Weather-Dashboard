@@ -1,4 +1,6 @@
-let cityName = [];
+'use strict'
+let cityNames = [];
+let cityName;
 
 $(document).ready(function() {
 
@@ -9,26 +11,26 @@ $(document).ready(function() {
     $(".list-group").empty();
 
     // Looping through the array of movies
-    for (let i = 0; i < cityName.length; i++) {
+    for (let i = 0; i < cityNames.length; i++) {
 
       // Then dynamicaly generating buttons for each movie in the array
       // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
       let a = $("<button>");
-      a.attr("data-name", cityName[i]);
-      a.text(cityName[i]);
+      a.attr("data-name", cityNames[i]);
+      a.text(cityNames[i]);
       $(".list-group").append(a);
     }
   }
 
-$('.btn').on('click', function(event) {
-    event.preventDefault();
-    let city = $('.cityInput').val().trim();
-    
-    cityName.push(city);
+$('#button-addon2').on('click', function() {
+    cityName = $('.cityInput').val();
+    cityNames.push(cityName);
+    console.log(cityName);
     
     renderButtons();
     getWeather();
     getForecast();
+    console.log(getForecast())
     
 })
   // on page load - functions need to run to display artist

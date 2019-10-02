@@ -1,3 +1,4 @@
+'use strict'
 function getWeather() {
     let APIKey = "e3c4c0f5b0220728586f535b1f6bef96";
     let weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${APIKey}`;
@@ -22,13 +23,10 @@ function getWeather() {
           let lon = response.coord.lon;
       
           // Transfer content to HTML
-          $('#city').empty();
+          
           $("#city").text(`${response.name} (${current})`);
-          $('#temp').empty();
           $("#temp").html(`Temperature: ${response.main.temp}&#8457;`);
-          $('#humidity').empty();
           $("#humidity").text(`Humidity: ${response.main.humidity}%`);
-          $('#wind').empty();
           $("#wind").text(`Wind Speed: ${response.wind.speed} MPH`);
           
           let image1 = $('<img>');
