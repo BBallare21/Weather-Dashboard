@@ -1,0 +1,36 @@
+.group1 {
+    text-align: left;
+    width: auto;
+    height: auto;
+    background-color: lightgray;
+    padding-bottom: 30px;
+}
+
+#card1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 260px;
+    line-height: 30px;
+}
+
+#card2 {
+    height: 225px;
+}
+
+.style {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    line-height: 15px;
+    margin-right: 5px;
+    height: 150px;
+}
+
+.t1 {
+    font-size: 14px;
+}
+
+.hu1 {
+    font-size: 14px;
+}

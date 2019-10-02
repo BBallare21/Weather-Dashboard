@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-brand mb-0 h1 $enable-responsive-font-sizes text-white m-auto">Weather Dashboard</span>
+    </nav>
+ 
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <form class="form-group group1">
+                <div class="form-group mx-sm-3 mb-2">
+                  <label class="ml-1" for="exampleFormControlInput1"><strong>Search for a City:</strong></label>
+                  <div class="input-group mb-3" style="width: 80%">
+                    <input type="text" class="form-control cityInput" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary btn-primary text-white" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card ml-3" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                    </ul>
+                  </div>
+            </form>
+          </div>
+          <div class="col-sm-8">
+            <div class="card" id='card1'>
+                <div class="card-body card1" id='cBody1'>
+                    <h3 id="city"></h3>
+                    <div id="temp"></div>
+                    <div id="humidity"></div>
+                    <div id="wind"></div>
+                    <div id="uvIndex"></div>
+                </div>
+              </div>
+              <div class="card" id='card2'>
+                <div class="card-body card2" id='cBody2'>
+                  <h4>5 Day Forecast:</h4>
+                  <div class="container">
+                        <div class="row">
+                          <div class="col-sm style" id="forecast5">
+                            <div id="date1"></div>
+                            <div class="w1" id="weatherimg1"></div>
+                            <div class="t1" id="tempF1"></div>
+                            <div class="hu1" id="humidityF1"></div>
+                          </div>
+                          <div class="col-sm style" id="forecast5">
+                            <div id="date2"></div>
+                            <div class="w1" id="weatherimg2"></div>
+                            <div class="t1" id="tempF2"></div>
+                            <div class="hu1" id="humidityF2"></div>
+                          </div>
+                          <div class="col-sm style" id="forecast5">
+                            <div id="date3"></div>
+                            <div class="w1" id="weatherimg3"></div>
+                            <div class="t1" id="tempF3"></div>
+                            <div class="hu1" id="humidityF3"></div>
+                          </div>
+                          <div class="col-sm style" id="forecast5">
+                            <div id="date4"></div>
+                            <div class="w1" id="weatherimg4"></div>
+                            <div class="t1" id="tempF4"></div>
+                            <div class="hu1" id="humidityF4"></div>
+                          </div>
+                          <div class="col-sm style" id="forecast5">
+                            <div id="date5"></div>
+                            <div class="w1" id="weatherimg5"></div>
+                            <div class="t1" id="tempF5"></div>
+                            <div class="hu1" id="humidityF5"></div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="logic.js"></script>
+    <script src="weather.js"></script>
+    <script src="forecast.js"></script>
+  </body>
+</html>
